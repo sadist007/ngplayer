@@ -27,6 +27,16 @@ var config = {
         loader: 'eslint-loader',
       },
       {
+        test: /\.(s)?css$/,
+        use: [{
+          loader: 'style-loader' // creates style nodes from JS strings
+        }, {
+          loader: 'css-loader' // translates CSS into CommonJS
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
+      },
+      {
         loaders: ['babel-loader'],
         include: [
           APP_DIR
