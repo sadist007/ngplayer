@@ -5,18 +5,35 @@ var BUILD_DIR = path.resolve(__dirname, 'build');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/index.js',
+  devtool: 'cheap-module-eval-source-map',
+  entry: [
+    'babel-polyfill',
+    APP_DIR + '/index.js',
+  ],
   output: {
     path: BUILD_DIR,
-    filename: 'app.js'
+    filename: 'app.js',
+    publicPath: '/static/'
   },
   module: {
-	loaders: [
-	{
-		test: '/\.js?/,',
-	  	include: APP_DIR,
-	  	loader: 'babel'
-	}]
+    rules: [
+      {
+        enforce: 'pre',
+        include: [
+          APP_DIR
+        ],
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
+        loaders: ['babel-loader'],
+        include: [
+          APP_DIR
+        ],
+        test: /\.js$/
+      }
+    ]
   }
 };
 
