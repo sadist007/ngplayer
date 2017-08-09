@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 
-class App extends Component {
+class Resource extends Component {
   render() {
     return (
-      <div className='App'>
-          <h2>Home page</h2>
+      <div className='Resource'>
+          <h2>Resource page</h2>
           <ul>
-            <li>Home</li>
-            <li><a href='/#/resource'>resource</a></li>
+            <li><a href='/#/'>Home</a></li>
+            <li>resource</li>
             <li><a href='/#/practice'>practice</a></li>
             <li><a href='/#/related'>related</a></li>
           </ul>
@@ -17,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Resource;

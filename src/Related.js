@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
 
-class App extends Component {
+class Related extends Component {
   render() {
     return (
-      <div className='App'>
-          <h2>Home page</h2>
+      <div className='Related'>
+          <h2>Related page</h2>
           <ul>
-            <li>Home</li>
+            <li><a href='/#/'>Home</a></li>
             <li><a href='/#/resource'>resource</a></li>
             <li><a href='/#/practice'>practice</a></li>
-            <li><a href='/#/related'>related</a></li>
+            <li>related</li>
           </ul>
       </div>
     );
   }
 }
 
-export default App;
+export default Related;

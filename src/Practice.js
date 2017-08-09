@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
 
-class App extends Component {
+class Practice extends Component {
   render() {
     return (
-      <div className='App'>
-          <h2>Home page</h2>
+      <div className='Practice'>
+          <h2>Practice page</h2>
           <ul>
-            <li>Home</li>
+            <li><a href='/#/'>Home</a></li>
             <li><a href='/#/resource'>resource</a></li>
-            <li><a href='/#/practice'>practice</a></li>
+            <li>practice</li>
             <li><a href='/#/related'>related</a></li>
           </ul>
       </div>
@@ -17,4 +16,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Practice;
