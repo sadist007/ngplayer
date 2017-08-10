@@ -13,19 +13,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 const MOUNT_NODE = document.getElementById('root')
 
-/*ReactDOM.render((
-	<HashRouter>
-		<Switch>
-			<Route exact path='/' component={App} />
-			<Route exact path='/resource' component={Resource} />
-			<Route exact path='/practice' component={Practice} />
-			<Route exact path='/related' component={Related} />
-		</Switch>
-	</HashRouter>
-), MOUNT_NODE);
-*/
-
 registerServiceWorker();
+
 let render = () => {
 	ReactDOM.render(
 	<HashRouter>

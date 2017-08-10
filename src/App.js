@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
 import './App.scss';
 
 class App extends Component {
@@ -11,10 +12,18 @@ class App extends Component {
         <div className='row'>
           <div className='col-md-12'>
             <ul className='nav nav-tabs' role='tablist'>
-              <li role='presentation' className='active'><a href='/#/' aria-controls='home' role='tab' data-toggle='tab'>Home</a></li>
-              <li role='presentation'><a href='/#/resources' aria-controls='resources' role='tab' data-toggle='tab'>Resources</a></li>
-              <li role='presentation'><a href='/#/practice' aria-controls='practice' role='tab' data-toggle='tab'>Practice</a></li>
-              <li role='presentation'><a href='/#/related' aria-controls='related' role='tab' data-toggle='tab'>Related</a></li>
+              <li role='presentation' className='active'>
+                <NavLink to={'/'} className='nav-link'>Home</NavLink>
+              </li>
+              <li role='presentation'>
+                <NavLink to={'/resource'} className='nav-link'>Resources</NavLink>
+              </li>
+              <li role='presentation'>
+                <NavLink to={'/practice'} className='nav-link'>Practice</NavLink>
+              </li>
+              <li role='presentation'>
+                <NavLink to={'/related'} className='nav-link'>Related</NavLink>
+              </li>
               <li role='presentation' className='pull-right'>
                 <input id='search' type='text' placeholder='search for...' />
                 <button type='button' className='btn btn-default btn-sm'>
@@ -27,7 +36,7 @@ class App extends Component {
             </ul>
 
             <div className='tab-content'>
-              <div role='tabpanel' className='tab-pane active' id='home'>
+              <div role='tabpanel' className='tab-pane active'>
                 <div className='row'>
                   <div>&#xa0;</div>
                   <div className='col-xs-12 col-md-8'>
