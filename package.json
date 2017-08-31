@@ -1,6 +1,6 @@
 {
   "name": "ngplayer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "babel": "latest",
@@ -8,19 +8,27 @@
     "babel-runtime": "^6.25.0",
     "bootstrap-sass": "^3.3.7",
     "express": "^4.15.4",
+    "jsonfile": "^3.0.1",
+    "mkdirp": "^0.5.1",
     "path": "latest",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10",
-    "redbox-react": "^1.5.0"
+    "redbox-react": "^1.5.0",
+    "zip-folder": "^1.0.0"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development node tools/scripts/start",
     "start-old": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "version": "cd bin && version.sh",
+    "zip-prerelease": "cd bin && version.sh && node zip.js -- prerelease && npm run cleanDataFile",
+    "zip-release": "cd bin && version.sh && node zip.js -- release && npm run cleanDataFile",
+    "clean": "rm -r _dist",
+    "cleanDataFile": "rm -r bin/data.json"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
